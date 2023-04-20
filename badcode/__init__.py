@@ -7,8 +7,10 @@ def sum_all(numbers):
     :param numbers: A list of numbers.
     :return: The sum of all the numbers in the list.
     """
-    total = 1
+    total = 0
     for number in numbers:
+        if type(number)== str:
+            raise ValueError()
         total += number
     return total
 
@@ -19,8 +21,10 @@ def multiply_all(numbers):
     :param numbers: A list of numbers.
     :return: The product of all the numbers in the list.
     """
-    total = 0
+    total = 1
     for number in numbers:
+        if type(number)!=int and type(number)!= float:
+            raise ValueError
         total *= number
     return total
 
