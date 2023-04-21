@@ -44,12 +44,13 @@ def test_multiply_all(num_list, value):
 @pytest.mark.parametrize("input_str,input_char,expected",
                         [
                         ( ["Manish",'M',1]),
-                          (["Bhusal",'B',1])
+                          (["Bhusal",'B',1]),
+                          ["AAPLE", 'A',2]
                          ])                    
 def test_count_characters(input_str,input_char,expected):
      assert count_characters (input_str,input_char)== expected
 
-@pytest.mark.parametrize("input,expected",[("I am Manish",3),("Hello World",2)])
+@pytest.mark.parametrize("input,expected",[("I am Manish",3),("Hello World",2), ("My",1)])
 def test_count_words(input,expected):
     assert count_words(input) == expected
 
@@ -60,11 +61,11 @@ def test_count_lines(input,expected):
     assert count_lines(input) == expected
 
 
-@pytest.mark.parametrize("input,expected",[("Manish","Hello, Manish!"),("Jack","Hello, Jack!")])
+@pytest.mark.parametrize("input,expected",[("Manish","Hello, Manish!"),("Jack","Hello, Jack!"),('Bhusal', 'Hello, Bhusal!')])
 def test_greet(input,expected):
     assert greet(input) == expected
 
-@pytest.mark.parametrize("input,expected",[("roger",False),("radar",True),("madam",True),('racecar',True)])
+@pytest.mark.parametrize("input,expected",[("roger",False),("radar",True),("madam",True),('racecar',True),('MAMA',False)])
 def test_check_is_palidrome(input,expected):
     assert check_is_palindrome(input) == expected
 
