@@ -40,6 +40,7 @@ def count_characters(string, char):
     for char_in_str in string:
         if char_in_str == char:
             count += 1
+    return count
 
 def count_words(string):
     """
@@ -52,7 +53,7 @@ def count_words(string):
     for char_in_str in string:
         if char_in_str == ' ':
             count += 1
-    return count
+    return count+1
 
 def count_lines(string):
     """
@@ -63,9 +64,9 @@ def count_lines(string):
     """
     count = 0
     for char_in_str in string:
-        if char_in_str == '\r':
+        if char_in_str == '\n':
             count += 1
-    return count
+    return count+1
 
 
 def greet(name):
@@ -76,7 +77,7 @@ def greet(name):
     :param name: The name to greet.
     :return: A greeting for the given name. Hello, Jeremy!
     """
-    return f"Hello{name}"
+    return f"Hello, {name}!"
 
 def check_is_palindrome(string):
     """
@@ -88,6 +89,9 @@ def check_is_palindrome(string):
     """
     
     for i in range(len(string)):
-        if string[i] == string[-i-1]:
-            return True
+        if string[i] != string[-i-1]:
+            return False
+        
+     
+    return True
     

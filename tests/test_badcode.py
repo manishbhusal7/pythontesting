@@ -43,15 +43,10 @@ def test_multiply_all(num_list, value):
 
 @pytest.mark.parametrize("input_str,input_char,expected",
                         [
-                        ( ["Manish",'M',2]),
+                        ( ["Manish",'M',1]),
                           (["Bhusal",'B',1])
                          ])                    
 def test_count_characters(input_str,input_char,expected):
-    if input_str is None:
-        with pytest.raises(ValueError):
-            count_characters(input_str)
-
-    else:
      assert count_characters (input_str,input_char)== expected
 
 @pytest.mark.parametrize("input,expected",[("I am Manish",3),("Hello World",2)])
@@ -69,7 +64,7 @@ def test_count_lines(input,expected):
 def test_greet(input,expected):
     assert greet(input) == expected
 
-@pytest.mark.parametrize("input,expected",[("roger",False),("radar",True),("madam",True),('MAMA',False)])
+@pytest.mark.parametrize("input,expected",[("roger",False),("radar",True),("madam",True),('racecar',True)])
 def test_check_is_palidrome(input,expected):
     assert check_is_palindrome(input) == expected
 
