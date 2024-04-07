@@ -1,5 +1,4 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/yxQIpL5h)
-# HW10-PythonTesting
+PythonTesting
 
 You have just been hired as a software engineer at a small startup. The company is looking for a talented software engineer to join their team. You are that person! Your boss's first task is to fix **bugs** in the `badcode` module: a collection of small functions.
 
