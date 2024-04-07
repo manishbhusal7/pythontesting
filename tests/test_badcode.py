@@ -56,7 +56,7 @@ def test_count_words(input,expected):
 
 
 
-@pytest.mark.parametrize("input,expected",[("I am from Nepal \n \n \n I am a computer science student",4)])
+@pytest.mark.parametrize("input,expected",[("I am from Nepal \n \n \n \n I am a computer science student",5)])
 def test_count_lines(input,expected):
     assert count_lines(input) == expected
 
